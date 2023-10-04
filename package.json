@@ -1,0 +1,12 @@
+{
+  "name": "o-contact-server",
+  "version": "1.0.0",
+  "description": "JSON Server for O'contact",
+  "main": "api/server.js",
+  "scripts": {
+    "start": "node api/server.js"
+  },
+  "dependencies": {
+		"json-server": "^0.17.4"
+	}
+}
