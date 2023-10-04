@@ -8,7 +8,7 @@ const router = jsonServer.router('db/db.json')
 const middlewares = jsonServer.defaults()
 
 // Set default middlewares (logger, static, cors and no-cache)
-server.use(middlewares)
+// server.use(middlewares)
 
 // // Add custom routes before JSON Server router
 // server.use(jsonServer.rewriter({
@@ -17,6 +17,13 @@ server.use(middlewares)
 
 // // Use default router
 // server.use(router)
+
+// Mount on `/api`
+server.get('/', function (req, res) {
+  res.redirect('/api')
+});
+
+server.use('/api', middlewares)
 server.use('/api', router)
 
 server.listen(PORT, () => {
