@@ -4,7 +4,7 @@ const jsonServer = require('json-server')
 const PORT = 3000
 
 const server = jsonServer.create()
-const router = jsonServer.router('db/db.json')
+const router = jsonServer.router('./db.json')
 const middlewares = jsonServer.defaults()
 
 // Set default middlewares (logger, static, cors and no-cache)
