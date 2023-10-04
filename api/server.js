@@ -10,13 +10,14 @@ const middlewares = jsonServer.defaults()
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares)
 
-// Add custom routes before JSON Server router
-server.use(jsonServer.rewriter({
-    '/api/*': '/$1',
-}))
+// // Add custom routes before JSON Server router
+// server.use(jsonServer.rewriter({
+//     '/api/*': '/$1',
+// }))
 
-// Use default router
-server.use(router)
+// // Use default router
+// server.use(router)
+server.use('/api', router)
 
 server.listen(PORT, () => {
     console.log(`JSON Server is running on http://localhost:${PORT}`)
