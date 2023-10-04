@@ -1,4 +1,18 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Dave",
+      "lastName": "Lopper",
+      "password": "ilovereact"
+    },
+    {
+      "id": 2,
+      "firstName": "Anne",
+      "lastName": "Onyme",
+      "password": "chut"
+    }
+  ],
   "contacts": [
     {
       "id": 1,
@@ -7,7 +21,8 @@
       "phone": "06 03 12 19 79",
       "email": "mummy@pyramid.com",
       "category": "family",
-      "favorite": false
+      "favorite": false,
+      "userId": 1
     },
     {
       "id": 2,
@@ -16,7 +31,8 @@
       "phone": "06 10 10 19 82",
       "email": "daddy@cool.fr",
       "category": "family",
-      "favorite": false
+      "favorite": false,
+      "userId": 1
     },
     {
       "id": 3,
@@ -25,7 +41,8 @@
       "phone": "06 23 45 67 89",
       "email": "nicole.roulet@mail.fr",
       "category": "friends",
-      "favorite": true
+      "favorite": true,
+      "userId": 1
     },
     {
       "id": 4,
@@ -34,7 +51,8 @@
       "phone": "06 89 67 23 45",
       "email": "henri.vonement@pm.me",
       "category": "friends",
-      "favorite": false
+      "favorite": false,
+      "userId": 2
     },
     {
       "id": 5,
@@ -43,7 +61,8 @@
       "phone": "07 98 76 54 32",
       "email": "maud.heration@mail.fr",
       "category": "friends",
-      "favorite": false
+      "favorite": false,
+      "userId": 1
     },
     {
       "id": 6,
@@ -52,7 +71,8 @@
       "phone": "07 21 03 20 09",
       "email": "robert.lingot@work.io",
       "category": "work",
-      "favorite": false
+      "favorite": false,
+      "userId": 2
     }
   ]
 }

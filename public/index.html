@@ -34,6 +34,9 @@
 
         <ul>
           <li>
+            <a href="https://o-contact-server.vercel.app/api/users">https://o-contact-server.vercel.app/api/users</a>
+          </li>
+          <li>
             <a href="https://o-contact-server.vercel.app/api/contacts">https://o-contact-server.vercel.app/api/contacts</a>
           </li>
         </ul>
@@ -205,12 +208,20 @@
         </p>
 
         <h3 id="filter-resource">Filtrer les données</h3>
-
-        <p>Un filtrage de base est pris en charge par les paramètres de la requête.</p>
+        <h4>Paramètres de la requête</h4>
 
         <pre><code class="js language-js">
           // Retourne tous les contacts marqués comme favoris
           fetch('https://o-contact-server.vercel.app/api/contacts?favorite=true')
+            .then((response) => response.json())
+            .then((json) => console.log(json))
+        </code></pre>
+
+        <h4>Ressources imbriquées</h4>
+
+        <pre><code class="js language-js">
+          // Retourne tous les contacts de l'utilisateur 1
+          fetch('https://o-contact-server.vercel.app/api/users/1/contacts')
             .then((response) => response.json())
             .then((json) => console.log(json))
         </code></pre>
