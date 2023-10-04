@@ -30,6 +30,14 @@
 
     <main>
       <div class="container">
+        <h2>Ressources</h2>
+
+        <ul>
+          <li>
+            <a href="https://o-contact-server.vercel.app/api/contacts">https://o-contact-server.vercel.app/api/contacts</a>
+          </li>
+        </ul>
+
         <h2>Guide</h2>
         
         <p>Pour accéder aux ressources et les modifier, vous pouvez utiliser les méthodes HTTP&nbsp;:</p>
@@ -48,7 +56,7 @@
 
         <h3 id="get-resource">Récupérer toutes les données</h3>
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/contacts')
+          fetch('https://o-contact-server.vercel.app/api/contacts')
             .then((response) => response.json())
             .then((json) => console.log(json))
 
@@ -63,7 +71,7 @@
         <h3>Récupérer une donnée</h3>
 
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/contacts/1')
+          fetch('https://o-contact-server.vercel.app/api/contacts/1')
             .then((response) => response.json())
             .then((json) => console.log(json))
 
@@ -81,7 +89,7 @@
 
         <h3 id="post-resource">Ajouter une donnée</h3>
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/contacts', {
+          fetch('https://o-contact-server.vercel.app/api/contacts', {
             method: 'POST',
             body: JSON.stringify({
               firstName: 'Dwight',
@@ -121,7 +129,7 @@
         <h4>Méthode <code>PUT</code></h4>
 
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/contacts/4', {
+          fetch('https://o-contact-server.vercel.app/api/contacts/4', {
             method: 'PUT',
             body: JSON.stringify({
               id: 4,
@@ -154,7 +162,7 @@
         <h4>Méthode <code>PATCH</code></h4>
 
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/contacts/4', {
+          fetch('https://o-contact-server.vercel.app/api/contacts/4', {
             method: 'PATCH',
             body: JSON.stringify({
               firstName: 'Henriette'
@@ -186,7 +194,7 @@
         <h3 id="delete-resource">Supprimer une donnée</h3>
 
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/contacts/6', {
+          fetch('https://o-contact-server.vercel.app/api/contacts/6', {
             method: 'DELETE'
           })
         </code></pre>
@@ -202,7 +210,7 @@
 
         <pre><code class="js language-js">
           // Retourne tous les contacts marqués comme favoris
-          fetch('https://o-contact-server.vercel.app/contacts?favorite=true')
+          fetch('https://o-contact-server.vercel.app/api/contacts?favorite=true')
             .then((response) => response.json())
             .then((json) => console.log(json))
         </code></pre>
