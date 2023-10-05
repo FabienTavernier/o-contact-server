@@ -34,10 +34,10 @@
 
         <ul>
           <li>
-            <a href="https://o-contact-server.vercel.app/api/users">https://o-contact-server.vercel.app/api/users</a>
+            <a href="https://o-contact-server.onrender.com/api/users">https://o-contact-server.onrender.com/api/users</a>
           </li>
           <li>
-            <a href="https://o-contact-server.vercel.app/api/contacts">https://o-contact-server.vercel.app/api/contacts</a>
+            <a href="https://o-contact-server.onrender.com/api/contacts">https://o-contact-server.onrender.com/api/contacts</a>
           </li>
         </ul>
 
@@ -59,7 +59,7 @@
 
         <h3 id="get-resource">Récupérer toutes les données</h3>
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/api/contacts')
+          fetch('https://o-contact-server.onrender.com/api/contacts')
             .then((response) => response.json())
             .then((json) => console.log(json))
 
@@ -74,7 +74,7 @@
         <h3>Récupérer une donnée</h3>
 
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/api/contacts/1')
+          fetch('https://o-contact-server.onrender.com/api/contacts/1')
             .then((response) => response.json())
             .then((json) => console.log(json))
 
@@ -92,7 +92,7 @@
 
         <h3 id="post-resource">Ajouter une donnée</h3>
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/api/contacts', {
+          fetch('https://o-contact-server.onrender.com/api/contacts', {
             method: 'POST',
             body: JSON.stringify({
               firstName: 'Dwight',
@@ -123,16 +123,15 @@
 
         <p>
           <b>Important&nbsp;:</b>
-          la donnée ne sera pas vraiment créée sur le serveur, mais c'est comme si…
-          En d'autres termes, si vous essayez d'accéder à la donnée avec l'<code>id</code>
-          7, vous aurez une erreur 404.
+          la donnée sera effectivement créée sur le serveur (public)…
+          Attention aux informations renseignées.
         </p>
 
         <h3 id="update-resource">Mettre à jour une donnée</h3>
         <h4>Méthode <code>PUT</code></h4>
 
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/api/contacts/4', {
+          fetch('https://o-contact-server.onrender.com/api/contacts/4', {
             method: 'PUT',
             body: JSON.stringify({
               id: 4,
@@ -165,7 +164,7 @@
         <h4>Méthode <code>PATCH</code></h4>
 
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/api/contacts/4', {
+          fetch('https://o-contact-server.onrender.com/api/contacts/4', {
             method: 'PATCH',
             body: JSON.stringify({
               firstName: 'Henriette'
@@ -191,20 +190,22 @@
         
         <p>
           <b>Important&nbsp;:</b>
-          la donnée ne sera pas vraiment mise à jour sur le serveur, mais c'est comme si…
+          la donnée sera effectivement mise à jour sur le serveur (public)…
+          Attention aux informations renseignées.
         </p>
 
         <h3 id="delete-resource">Supprimer une donnée</h3>
 
         <pre><code class="js language-js">
-          fetch('https://o-contact-server.vercel.app/api/contacts/6', {
+          fetch('https://o-contact-server.onrender.com/api/contacts/6', {
             method: 'DELETE'
           })
         </code></pre>
         
         <p>
           <b>Important&nbsp;:</b>
-          la donnée ne sera pas vraiment supprimer du serveur, mais c'est comme si…
+          la donnée sera effectivement supprimer du serveur…
+          Ne pas tout supprimer.
         </p>
 
         <h3 id="filter-resource">Filtrer les données</h3>
@@ -212,7 +213,7 @@
 
         <pre><code class="js language-js">
           // Retourne tous les contacts marqués comme favoris
-          fetch('https://o-contact-server.vercel.app/api/contacts?favorite=true')
+          fetch('https://o-contact-server.onrender.com/api/contacts?favorite=true')
             .then((response) => response.json())
             .then((json) => console.log(json))
         </code></pre>
@@ -221,7 +222,7 @@
 
         <pre><code class="js language-js">
           // Retourne tous les contacts de l'utilisateur 1
-          fetch('https://o-contact-server.vercel.app/api/users/1/contacts')
+          fetch('https://o-contact-server.onrender.com/api/users/1/contacts')
             .then((response) => response.json())
             .then((json) => console.log(json))
         </code></pre>
